@@ -23,11 +23,13 @@ package com.lq186.algorithm.sort;
 import com.lq186.algorithm.util.PrintUtils;
 
 /**
- * Shell 排序
+ * Shell 排序(不稳定排序)
  * 1. 将有 length 个元素的数组分成 length / 2 个数字序列，第 1 个数据 和 第 length / 2 + 1 个数据为一对, 依次类推
  * 2. 一次循环使每一个序列对排好顺序
  * 3. 再次变为 length / 4 个序列，再次排序
  * 4. 重复 3 , 直到变为一个序列
+ * <p>
+ * 平均复杂度 O(n^(3/2)), 最坏复杂度 O(n^2)
  */
 public final class ShellSort implements ISort {
 

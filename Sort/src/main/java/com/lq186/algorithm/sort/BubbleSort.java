@@ -23,9 +23,11 @@ package com.lq186.algorithm.sort;
 import com.lq186.algorithm.util.PrintUtils;
 
 /**
- * 冒泡排序
+ * 冒泡排序(稳定排序)
  * 1. 比较相邻的两个数据的大小，如果前面的数据大于后面的数据，交换两个数据。经过一轮排序后，最大的数据可以排好
  * 2. 重复 1 {n - 1}次
+ * <p>
+ * 平均复杂度 O(n^2), 最坏复杂度 O(n^2)
  */
 public final class BubbleSort implements ISort {
 

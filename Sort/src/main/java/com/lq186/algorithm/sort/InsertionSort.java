@@ -23,11 +23,13 @@ package com.lq186.algorithm.sort;
 import com.lq186.algorithm.util.PrintUtils;
 
 /**
- * 插入排序
+ * 插入排序(稳定排序)
  * 1. 对数组的前两个数据进行从小到大的排序
  * 2. 将第三个数据与排好的两个数据比较，然后插入合适的位置
  * 3. 将第四个数据插入已排好的前三个数据中
  * 4. 重复 3
+ * <p>
+ * 平均复杂度 O(n^2), 最坏复杂度 O(n^2)
  */
 public final class InsertionSort implements ISort {
 

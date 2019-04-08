@@ -23,10 +23,12 @@ package com.lq186.algorithm.sort;
 import com.lq186.algorithm.util.PrintUtils;
 
 /**
- * 快速排序
+ * 快速排序(不稳定排序)
  * 1. 定义一个分界值，将数组分为两部分
  * 2. 将大于分界值的数据集中在数组右边，小于分界值的集中在数组左边
  * 3. 左边和右边的数据独立排序，重复 2
+ * <p>
+ * 平均复杂度 O(nlogn), 最坏复杂度 O(n^2)
  */
 public final class QuickSort implements ISort {
 
@@ -36,17 +38,17 @@ public final class QuickSort implements ISort {
     }
 
     private void sort(final int[] array, final int left, final int right) {
-        int splitValue = array[(left + right) / 2];
+        int splitValue = array[(left + right) / 2]; // 分割值选取
         int leftIndex = left;
         int rightIndex = right;
         while (leftIndex < rightIndex) {
-            while (array[leftIndex] < splitValue) {
+            while (array[leftIndex] < splitValue) { // 左边的值本身比基准值小，则左指针右移
                 ++leftIndex;
             }
-            while (array[rightIndex] > splitValue) {
+            while (array[rightIndex] > splitValue) { // 右边的值本身比基准值大，则右指针左移
                 --rightIndex;
             }
-            if (leftIndex < rightIndex) {
+            if (leftIndex < rightIndex) { // 没有判定到最后一个数据，则进行交换；否则切分数组，重新排序切分数组
                 int temp = array[leftIndex];
                 array[leftIndex] = array[rightIndex];
                 array[rightIndex] = temp;
@@ -56,7 +58,7 @@ public final class QuickSort implements ISort {
         }
         PrintUtils.printArray(array);
         if (leftIndex == rightIndex) {
-            // 如果最后一个元素比基准值大，则归为右边，否则归为左边
+            // 如果最后一个数据比基准值大，则归为右边，否则归为左边
             if (array[leftIndex] > splitValue) {
                 --rightIndex;
             } else {

@@ -56,6 +56,10 @@ public final class Bootstrap {
         sort(new HeapSort());
         //new HeapSort().sort(new int[]{719, 793, 302, 319, 520, 327, 949, 104, 126, 557});
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>> [堆排序] >>>>>>>>>>>>>>>>>>>>>>>>");
+
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>> [合并排序] >>>>>>>>>>>>>>>>>>>>>>>>");
+        sort(new MergeSort(), 15);
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>> [合并排序] >>>>>>>>>>>>>>>>>>>>>>>>");
     }
 
     private static final void sort(final ISort sort) {

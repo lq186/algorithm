@@ -23,8 +23,10 @@ package com.lq186.algorithm.sort;
 import com.lq186.algorithm.util.PrintUtils;
 
 /**
- * 堆排序
+ * 堆排序(不稳定排序)
  * 构造堆(完全二叉树), 堆排序输出
+ * <p>
+ * 平均复杂度 O(nlogn), 最坏复杂度 O(nlogn)
  */
 public final class HeapSort implements ISort {
 

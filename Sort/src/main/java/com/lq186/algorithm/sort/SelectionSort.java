@@ -23,10 +23,12 @@ package com.lq186.algorithm.sort;
 import com.lq186.algorithm.util.PrintUtils;
 
 /**
- * 选择排序
+ * 选择排序(不稳定排序)
  * 1. 从原始数据中选出一个最小的数，和第1个位置的数据进行交换；
  * 2. 从剩下 {n - 1} 个数据中选出一个最小的，和第二个位置的数据交换；
  * 3. 重复 1 和 2
+ * <p>
+ * 平均复杂度 O(n^2), 最坏复杂度 O(n^2)
  */
 public final class SelectionSort implements ISort {
 
