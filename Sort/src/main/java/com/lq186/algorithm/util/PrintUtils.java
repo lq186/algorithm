@@ -37,4 +37,15 @@ public final class PrintUtils {
         System.out.println("]\n");
     }
 
+    public static final void printArray(String[] array, int n) {
+        System.out.print("[");
+        for (int i = 0; i < n; ++i) {
+            if (i > 0) {
+                System.out.print(", ");
+            }
+            System.out.printf("%s", array[i]);
+        }
+        System.out.println("]\n");
+    }
+
 }

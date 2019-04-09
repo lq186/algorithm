@@ -24,11 +24,29 @@ import java.util.Random;
 
 public final class RandomUtils {
 
+    private static final char[] CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".toCharArray();
+
     public static final int[] randomIntArray(int length) {
         final int[] array = new int[length];
         final Random random = new Random();
         for (int i = 0; i < length; ++i) {
             array[i] = random.nextInt(1000);
+        }
+        return array;
+    }
+
+    public static final String[] randomStringArray(int length) {
+        final Random random = new Random();
+        final int stringLength = random.nextInt(5) + 5;
+        final int charsLength = CHARS.length;
+        final String[] array = new String[length];
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < length; ++i) {
+            stringBuilder.setLength(0);
+            for (int c = 0; c < stringLength; ++c) {
+                stringBuilder.append(CHARS[random.nextInt(charsLength)]);
+            }
+            array[i] = stringBuilder.toString();
         }
         return array;
     }
