@@ -31,6 +31,10 @@ public final class Bootstrap {
         System.out.println(">>>>>>>>>>>>>>>> 顺序查找 >>>>>>>>>>>>>>>>");
         search(new SimpleSearch());
         System.out.println(">>>>>>>>>>>>>>>> 顺序查找 >>>>>>>>>>>>>>>>");
+
+        System.out.println(">>>>>>>>>>>>>>>> 折半查找 >>>>>>>>>>>>>>>>");
+        search(new BinarySearch());
+        System.out.println(">>>>>>>>>>>>>>>> 折半查找 >>>>>>>>>>>>>>>>");
     }
 
     private static final void search(final ISearch search) {
