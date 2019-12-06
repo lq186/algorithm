@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Common" />
+        <module name="leetcode" />
         <module name="LinkedList" />
         <module name="SequentialList" />
         <module name="Sort" />
@@ -14,6 +15,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Common" target="1.8" />
+      <module name="leetcode" target="1.8" />
       <module name="LinkedList" target="1.8" />
       <module name="SequentialList" target="1.8" />
       <module name="Sort" target="1.8" />
