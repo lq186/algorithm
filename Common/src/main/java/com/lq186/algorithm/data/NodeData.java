@@ -22,6 +22,8 @@ package com.lq186.algorithm.data;
 
 import lombok.Data;
 
+import java.util.Objects;
+
 @Data
 public final class NodeData implements INodeData {
 
@@ -31,4 +33,27 @@ public final class NodeData implements INodeData {
 
     private int age;
 
+    @Override
+    public String toString() {
+        return "NodeData{" +
+                "key='" + key + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        NodeData nodeData = (NodeData) o;
+        return age == nodeData.age &&
+                Objects.equals(key, nodeData.key) &&
+                Objects.equals(name, nodeData.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(key, name, age);
+    }
 }
